@@ -8,7 +8,7 @@ steps:
     settings:
       repo: matseee/golang-node
       username:
-        from_secret: DOCKERHUB_EMAIL
+        from_secret: DOCKERHUB_USER
       password:
         from_secret: DOCKERHUB_PASS
       purge: true
