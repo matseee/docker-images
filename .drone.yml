@@ -4,11 +4,19 @@ name: build-images
 
 steps:
   - name: golang-node:go1.17.6-node17-alpine3.15
-    image: docker:latest
-    commands:
-      - cd golang-node/
-      - export GOLANG_VERSION=1.17.6
-      - export NODE_VERSION=17
-      - export ALPINE_VERSION=3.15
-      - docker build . --build-arg GOLANG_VERSION=$GOLANG_VERSION --build-arg NODE_VERSION=$NODE_VERSION --build-arg ALPINE_VERSION=$ALPINE_VERSION --tag golang-node:go$GOLANG_VERSION-node$NODE_VERSION-alpine$ALPINE_VERSION
-      - docker run --rm golang-node:go$GOLANG_VERSION-node$NODE_VERSION-alpine$ALPINE_VERSION /bin/sh -c "go version && node --version"
+    image: plugins/docker
+    settings:
+      repo: matseee/golang-node
+      username:
+        from_secret: DOCKERHUB_EMAIL
+      password:
+        from_secret: DOCKERHUB_PASS
+      purge: true
+      context: golang-node/
+      build_args: 
+        - GOLANG_VERSION=1.17.6
+        - NODE_VERSION=17
+        - ALPINE_VERSION=3.15
+      tags:
+        - latest
+        - go1.17.6-node17-alpine3.15
