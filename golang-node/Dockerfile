@@ -13,4 +13,4 @@ COPY --from=node /usr/local/bin /usr/local/bin
 
 RUN apk update
 RUN apk upgrade
-RUN apk add libfftw3-dev libsndfile1-dev
+RUN apk add fftw-dev # libsndfile1-dev

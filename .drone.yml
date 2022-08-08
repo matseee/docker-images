@@ -3,7 +3,7 @@ type: docker
 name: build-images
 
 steps:
-  - name: golang-node:go1.17.6-node17-alpine3.15
+  - name: golang-node:go1.19.0-node18.7.0-alpine3.16
     image: plugins/docker
     settings:
       repo: matseee/golang-node
@@ -14,9 +14,9 @@ steps:
       purge: true
       dockerfile: golang-node/Dockerfile
       build_args: 
-        - GOLANG_VERSION=1.17.6
-        - NODE_VERSION=17
-        - ALPINE_VERSION=3.15
+        - GOLANG_VERSION=1.19.0
+        - NODE_VERSION=18.7.0
+        - ALPINE_VERSION=3.16
       tags:
         - latest
-        - go1.17.6-node17-alpine3.15
+        - go1.19.0-node17-alpine3.16
