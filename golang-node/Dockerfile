@@ -13,4 +13,4 @@ COPY --from=node /usr/local/bin /usr/local/bin
 
 RUN apk update
 RUN apk upgrade
-RUN apk add fftw-dev g++ make build-base # libsndfile1-dev
+RUN apk add fftw-dev libayatana-appindicator-dev gtk+3.0-dev build-base # libsndfile1-dev
