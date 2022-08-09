@@ -19,4 +19,20 @@ steps:
         - ALPINE_VERSION=3.16
       tags:
         - latest
-        - go1.19.0-node17-alpine3.16
+        - go1.19.0-node18.7.0-alpine3.16
+  - name: node:node18.7.0-alpine3.16
+    image: plugins/docker
+    settings:
+      repo: matseee/node
+      username:
+        from_secret: DOCKERHUB_USER
+      password:
+        from_secret: DOCKERHUB_PASS
+      purge: true
+      dockerfile: node/Dockerfile
+      build_args:
+        - NODE_VERSION=18.7.0
+        - ALPINE_VERSION=3.16
+      tags:
+        - latest
+        - node18.7.0-alpine3.16

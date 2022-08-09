@@ -1,7 +1,7 @@
 # golang-node
 based on golang's and node's alpine images. 
 
-It also includes the following packages/dependencies:
+## included packages/dependencies
 - chromium
 - build-base
 - fftw-dev 
