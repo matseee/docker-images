@@ -11,6 +11,7 @@ COPY --from=node /usr/local/lib /usr/local/lib
 COPY --from=node /usr/local/include /usr/local/include
 COPY --from=node /usr/local/bin /usr/local/bin
 
-RUN apk update
-RUN apk upgrade
-RUN apk add fftw-dev libayatana-appindicator-dev gtk+3.0-dev build-base # libsndfile1-dev
+RUN apk add fftw-dev libayatana-appindicator-dev gtk+3.0-dev build-base
+RUN apk add chromium
+
+ENV CHROME_BIN=/usr/bin/chromium-browser

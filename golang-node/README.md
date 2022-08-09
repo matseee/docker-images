@@ -1,5 +1,12 @@
 # golang-node
-based on golang's and node's alpine images.
+based on golang's and node's alpine images. 
+
+It also includes the following packages/dependencies:
+- chromium
+- build-base
+- fftw-dev 
+- libayatana-appindicator-dev 
+- gtk+3.0-dev 
 
 ## build command
 ```shell
