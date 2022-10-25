@@ -5,4 +5,4 @@
 - [node](node/) alpine based image with node
   - [matseee/node:node18.7.0-alpine3.16](https://hub.docker.com/layers/269376830/matseee/node/node18.7.0-alpine3.16/images/sha256-7ab21fa68c670f442dadebeedfa07adca409c634565d4b153589a454e4861bf6?context=repo)
 - [openjdk-node](openjdk-node) alpine based image with openjdk and node
-  - [matseee/openjdk-node:openjdk11-node18.7.0-alpine3.16]()
+  - [matseee/openjdk-node:openjdk11-node18.7.0-alpine3.16](https://hub.docker.com/layers/matseee/openjdk-node/openjdk11-node18.7.0-alpine3.16/images/sha256-c1db87d994fbbc99b60cd7e3d7df4c0a1ad920bf55818a5b6afa50f4017fbca4?context=repo)
