@@ -47,9 +47,9 @@ steps:
       purge: true
       dockerfile: openjdk-node/Dockerfile
       build_args: 
-        - OPENJDK_VERSION=11
+        - OPENJDK_VERSION=20
         - NODE_VERSION=18.17.1
-        - ALPINE_VERSION=3.16
+        - ALPINE_VERSION=3.18
       tags:
         - latest
-        - openjdk19-node18.17.1-alpine3.16
+        - openjdk20-node18.17.1-alpine3.18
