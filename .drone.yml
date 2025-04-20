@@ -4,7 +4,7 @@ name: build-images
 
 steps:
   - name: golang-node
-    image: plugins/docker:20.17.4
+    image: plugins/docker
     settings:
       repo: matseee/golang-node
       username:
@@ -21,7 +21,7 @@ steps:
         - latest
         - go1.24.2-node23.11.0-alpine3.20
   - name: node
-    image: plugins/docker:20.17.4
+    image: plugins/docker
     settings:
       repo: matseee/node
       username:
@@ -37,7 +37,7 @@ steps:
         - latest
         - node23.11.0-alpine3.20
   - name: openjdk-node
-    image: plugins/docker:20.17.4
+    image: plugins/docker
     settings:
       repo: matseee/openjdk-node
       username:
