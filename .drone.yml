@@ -13,6 +13,7 @@ steps:
         from_secret: DOCKERHUB_PASS
       purge: true
       demon_off: true
+      debug: true
       dockerfile: golang-node/Dockerfile
       build_args: 
         - GOLANG_VERSION=1.24.2
