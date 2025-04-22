@@ -11,17 +11,16 @@ steps:
         from_secret: DOCKERHUB_USER
       password:
         from_secret: DOCKERHUB_PASS
-      purge: true
       demon_off: true
       debug: true
       dockerfile: golang-node/Dockerfile
       build_args: 
         - GOLANG_VERSION=1.24.2
         - NODE_VERSION=23.11.0
-        - ALPINE_VERSION=3.20
+        - ALPINE_VERSION=3.21
       tags:
         - latest
-        - go1.24.2-node23.11.0-alpine3.20
+        - go1.24.2-node23.11.0-alpine3.21
   - name: node
     image: plugins/docker
     settings:
@@ -30,15 +29,14 @@ steps:
         from_secret: DOCKERHUB_USER
       password:
         from_secret: DOCKERHUB_PASS
-      purge: true
       demon_off: true
       dockerfile: node/Dockerfile
       build_args:
         - NODE_VERSION=23.11.0
-        - ALPINE_VERSION=3.20
+        - ALPINE_VERSION=3.21
       tags:
         - latest
-        - node23.11.0-alpine3.20
+        - node23.11.0-alpine3.21
   - name: openjdk-node
     image: plugins/docker
     settings:
@@ -47,13 +45,12 @@ steps:
         from_secret: DOCKERHUB_USER
       password:
         from_secret: DOCKERHUB_PASS
-      purge: true
       demon_off: true
       dockerfile: openjdk-node/Dockerfile
       build_args: 
-        - OPENJDK_VERSION=25
+        - OPENJDK_VERSION=24.0.1
         - NODE_VERSION=23.11.0
-        - ALPINE_VERSION=3.20
+        - ALPINE_VERSION=3.21
       tags:
         - latest
-        - openjdk25-node23.11.0-alpine3.20
+        - openjdk24-node23.11.0-alpine3.20
